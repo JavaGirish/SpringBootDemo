@@ -1,10 +1,25 @@
 package com.example.demo.beans;
 
-public class Country {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Country")
+public class Country {
+	
+	@Id
+	@Column(name="id")
 	private int id;
+	
+	@Column(name= "name")
 	private String name;
+	
+	@Column(name="capital")
 	private String capital;
+	
+	public Country() {}
 	
 	public Country(int id, String name, String capital) {
 		super();
